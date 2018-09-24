@@ -1,0 +1,23 @@
+<h3>Session Details</h3>
+
+<form [formGroup]="sessionDetails">
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" formControlName="title">
+  </div>
+  <div class="form-group">
+    <label for="abstract">Abstract</label>
+    <textarea rows="4" class="form-control" id="abstract" formControlName="abstract"></textarea>
+  </div>
+  <div formGroupName="speaker">
+    <div class="form-group">
+      <label for="firstName">FirstName</label>
+      <input type="text" class="form-control" id="firstName" formControlName="firstname">
+    </div>
+    <div class="form-group">
+      <label for="lastName">LastName</label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastname">
+    </div>
+  </div>
+</form>
