@@ -1,0 +1,12 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let session of sessions" [routerLink]="['sessions', session.id]">
+      <td>{{session.title}}</td>
+    </tr>
+  </tbody>
+</table>
