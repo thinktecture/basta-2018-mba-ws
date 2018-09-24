@@ -22,9 +22,11 @@ namespace Serverless
             Session session,
             ILogger log)
         {
-            // TODO: handle 404 :-)
             // TODO: handle exceptions
-
+            if (session == null)
+            {
+                return new NotFoundResult();
+            }
             return new OkObjectResult(session);
         }
     }
