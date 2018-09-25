@@ -12,9 +12,9 @@ using Newtonsoft.Json;
 
 namespace Serverless
 {
-    public static class SessionsDetails
+    public static class GetSessionsDetails
     {
-        [FunctionName("SessionsDetails")]
+        [FunctionName("GetSessionsDetails")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "GET", Route = "sessions/{id}")]
             HttpRequest req,
@@ -27,6 +27,7 @@ namespace Serverless
             {
                 return new NotFoundResult();
             }
+
             return new OkObjectResult(session);
         }
     }

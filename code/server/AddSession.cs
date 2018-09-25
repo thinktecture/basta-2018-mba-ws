@@ -18,19 +18,18 @@ namespace Serverless
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "POST", Route = "sessions")]
             Session newSession,
-            [CosmosDB("conferences", "data", ConnectionStringSetting="CosmosDB")]
-            out Session document,
+            //[CosmosDB("conferences", "data", ConnectionStringSetting="CosmosDB")]
+            //out Session document,
             ILogger log)
         {
             // TODO: Security ;-)
-            // TODO: Validation!!!
+            // TODO: Validation!
 
             newSession.Id = Guid.NewGuid();
-            newSession.Speaker.Id = Guid.NewGuid();
 
-            document = newSession;
+            //document = newSession;
 
-            // TODO: Exception handling!!!
+            // TODO: Exception handling!
             return new OkResult();
         }
     }
